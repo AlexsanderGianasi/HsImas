@@ -19,12 +19,6 @@
 
             <a href="https://wa.me/5511971113003?text=Ol%C3%A1%20HS%20conheci%20o%20site%20de%20voc%C3%AAs%20e%20estou%20interessado%20em%20um%20produto!" target="_blank"><i class="fi fi-brands-whatsapp icon"></i></a>
 
-            <i class="fi fi-rr-search icon" id="search-btn"></i>
-
-            <div class="search-container" id="search-box">
-                <input type="text" placeholder="Pesquisar...">
-            </div>
-
         </main>
 
         <nav id="itens" style="display: none;">
@@ -36,11 +30,28 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Bem-vindo à HS Imãs!</h1>
-        <p>Seu destino número um para imãs de alta qualidade.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deserunt accusantium, magnam tempore nesciunt odio debitis inventore iure earum libero quidem. Possimus nisi laboriosam voluptatibus voluptas animi laborum magni consequatur!</p>
-    </main>
+    <section class="placaMag">
+      <h1><strong>Placa Magnética</strong></h1>
+      <p>Placa magnética industrial de alta qualidade, ideal para retíficas, fresadoras e processos de usinagem que exigem fixação firme e precisa. Projetada para oferecer máximo desempenho, segurança e estabilidade, mesmo em trabalhos contínuos e pesados. <br><br>
+
+      ✔️ Fixação magnética uniforme e potente, garantindo peças bem presas durante toda a operação <br>
+      ✔️ Construção robusta, com acabamento retificado para maior precisão <br>
+      ✔️ Sistema de acionamento manual ON/OFF, simples e confiável <br>
+      ✔️ Alta durabilidade, ideal para ambientes industriais e oficinas profissionais <br>
+      ✔️ Excelente custo-benefício para quem busca eficiência sem abrir mão da qualidade <br><br>
+
+      Essa placa magnética é a escolha certa para profissionais que precisam de precisão, produtividade e confiança no dia a dia da usinagem. Um equipamento essencial para elevar o nível do seu trabalho. <br><br>
+
+      📦 Produto em ótimo estado <br>
+      🚀 Pronto para uso imediato <br><br>
+
+      Entre em contato para mais informações e garanta um equipamento que realmente faz a diferença no seu processo produtivo!</p>
+
+      <div class="placas">
+        <img class="redonda" src="imgs/placa redonda.png" alt="">
+        <img class="retangular" src="imgs/Placa magnetica.png" alt="placa magnetica">
+      </div>
+    </section>
 
 
 
@@ -63,102 +74,6 @@
             itens.style.display = "block";
             }
         }
-    
-         /* ===== ELEMENTOS ===== */
-      const searchBtn = document.getElementById("search-btn");
-      const searchBox = document.getElementById("search-box");
-      const inputSearch = searchBox.querySelector("input");
-      const suggestionsBox = document.getElementById("suggestions");
-
-      /* ===== PRODUTOS ===== */
-      const produtos = {
-        placa: "placa.html",
-        grade: "/produtos/gradesmagneticas.html",
-        tubos: "/produtos/tubosmagneticos.html",
-        embuchado: "/produtos/embuchadomagnetico.html",
-        placadeseparaçã: "/produtos/placadeseparacao.html",
-        pinca: "/produtos/pincamagnetica.html",
-      };
-
-      /* ===== NORMALIZAR ===== */
-      function normalizar(texto) {
-        return texto
-          .normalize("NFD")
-          .replace(/[\u0300-\u036f]/g, "")
-          .toLowerCase()
-          .trim();
-      }
-
-      /* ===== ABRIR SEARCH ===== */
-      searchBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        if (searchBox.classList.contains("active")) {
-          buscarProduto();
-        } else {
-          searchBox.classList.add("active");
-          inputSearch.focus();
-        }
-      });
-
-      /* ===== AUTOCOMPLETE ===== */
-      inputSearch.addEventListener("input", () => {
-        const termo = normalizar(inputSearch.value);
-        suggestionsBox.innerHTML = "";
-
-        if (!termo) {
-          suggestionsBox.style.display = "none";
-          return;
-        }
-
-        const encontrados = Object.keys(produtos).filter((p) =>
-          normalizar(p).includes(termo)
-        );
-
-        if (encontrados.length === 0) {
-          suggestionsBox.style.display = "none";
-          return;
-        }
-
-        encontrados.forEach((produto) => {
-          const li = document.createElement("li");
-          li.textContent = produto;
-
-          li.addEventListener("click", () => {
-            window.location.href = produtos[produto];
-          });
-
-          suggestionsBox.appendChild(li);
-        });
-
-        suggestionsBox.style.display = "block";
-      });
-
-      /* ===== ENTER ===== */
-      inputSearch.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          buscarProduto();
-        }
-      });
-
-      /* ===== BUSCAR ===== */
-      function buscarProduto() {
-        const termo = normalizar(inputSearch.value);
-        if (produtos[termo]) {
-          window.location.href = produtos[termo];
-        } else {
-          alert("Produto não encontrado");
-        }
-      }
-
-      /* ===== FECHAR AO CLICAR FORA ===== */
-      document.addEventListener("click", (e) => {
-        if (!searchBox.contains(e.target) && !searchBtn.contains(e.target)) {
-          searchBox.classList.remove("active");
-          suggestionsBox.style.display = "none";
-        }
-      });
-
     </script>
 
 

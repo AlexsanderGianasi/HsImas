@@ -77,32 +77,42 @@ li:hover {
     box-sizing: border-box;
 }
 
-.search-container {
-    position: absolute;
-    top: 10px;
-    right: 200px;
-    padding: 10px;
-    border-radius: 8px;
-
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(10px);
-    transition: 0.3s ease;
-} 
-
-/* Quando ativa */
-.search-container.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-.search-container input {
-    border: 1px solid #ccc;
-    outline: none;
-    padding: 8px 12px;
-    border-radius: 20px;
-    width: 160px;
-}
-
 /* ---------------------- Header ---------------------- */
+
+/* ------------------- section ---------------- */
+section {
+    padding: 40px 20px;
+}
+
+.placaMag h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.placaMag p {
+    font-size: 12px;
+    line-height: 1.2;
+    max-width: 300px;
+    max-height: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: justify;
+    float: left;
+}
+
+.placas {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    margin-top: 130px;
+    
+}
+
+img.redonda {
+    width: 100px;
+}
+img.retangular {
+    width: 200px;
+}
