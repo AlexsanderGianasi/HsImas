@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/HS melhorada 2.0.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+    <title>Hs Imãs</title>
+</head>
+<body>
+    
+    <header>
+        <main>
+            <a href="index.html"><img src="imgs/HS melhorada 2.0.png" alt="Logo HS Imãs" class="logo"></a>
+
+            <span id="burger" class="fi fi-rr-menu-burger" onclick="clickMenu()"></span>
+
+            <a href="https://wa.me/5511971113003?text=Ol%C3%A1%20HS%20conheci%20o%20site%20de%20voc%C3%AAs%20e%20estou%20interessado%20em%20um%20produto!" target="_blank"><i class="fi fi-brands-whatsapp icon"></i></a>
+
+            <i class="fi fi-rr-search icon" id="search-btn"></i>
+
+            <div class="search-container" id="search-box">
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+
+        </main>
+
+        <nav id="itens" style="display: none;">
+            <ul class="nav-links">
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="https://wa.me/5511971113003?text=Ol%C3%A1%20HS%20conheci%20o%20site%20de%20voc%C3%AAs%20e%20estou%20interessado%20em%20um%20produto!" target="_blank">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo à HS Imãs!</h1>
+        <p>Seu destino número um para imãs de alta qualidade.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deserunt accusantium, magnam tempore nesciunt odio debitis inventore iure earum libero quidem. Possimus nisi laboriosam voluptatibus voluptas animi laborum magni consequatur!</p>
+    </main>
+
+
+
+
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = "block";
+            } else {
+              itens.style.display = "none";
+            }
+        }
+
+        function clickMenu() {
+            let itens = document.getElementById("itens");
+            if (itens.style.display == "block") {
+            itens.style.display = "none";
+            } else {
+            itens.style.display = "block";
+            }
+        }
+    
+         /* ===== ELEMENTOS ===== */
+      const searchBtn = document.getElementById("search-btn");
+      const searchBox = document.getElementById("search-box");
+      const inputSearch = searchBox.querySelector("input");
+      const suggestionsBox = document.getElementById("suggestions");
+
+      /* ===== PRODUTOS ===== */
+      const produtos = {
+        placa: "placa.html",
+        grade: "/produtos/gradesmagneticas.html",
+        tubos: "/produtos/tubosmagneticos.html",
+        embuchado: "/produtos/embuchadomagnetico.html",
+        placadeseparaçã: "/produtos/placadeseparacao.html",
+        pinca: "/produtos/pincamagnetica.html",
+      };
+
+      /* ===== NORMALIZAR ===== */
+      function normalizar(texto) {
+        return texto
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .trim();
+      }
+
+      /* ===== ABRIR SEARCH ===== */
+      searchBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        if (searchBox.classList.contains("active")) {
+          buscarProduto();
+        } else {
+          searchBox.classList.add("active");
+          inputSearch.focus();
+        }
+      });
+
+      /* ===== AUTOCOMPLETE ===== */
+      inputSearch.addEventListener("input", () => {
+        const termo = normalizar(inputSearch.value);
+        suggestionsBox.innerHTML = "";
+
+        if (!termo) {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        const encontrados = Object.keys(produtos).filter((p) =>
+          normalizar(p).includes(termo)
+        );
+
+        if (encontrados.length === 0) {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        encontrados.forEach((produto) => {
+          const li = document.createElement("li");
+          li.textContent = produto;
+
+          li.addEventListener("click", () => {
+            window.location.href = produtos[produto];
+          });
+
+          suggestionsBox.appendChild(li);
+        });
+
+        suggestionsBox.style.display = "block";
+      });
+
+      /* ===== ENTER ===== */
+      inputSearch.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          buscarProduto();
+        }
+      });
+
+      /* ===== BUSCAR ===== */
+      function buscarProduto() {
+        const termo = normalizar(inputSearch.value);
+        if (produtos[termo]) {
+          window.location.href = produtos[termo];
+        } else {
+          alert("Produto não encontrado");
+        }
+      }
+
+      /* ===== FECHAR AO CLICAR FORA ===== */
+      document.addEventListener("click", (e) => {
+        if (!searchBox.contains(e.target) && !searchBtn.contains(e.target)) {
+          searchBox.classList.remove("active");
+          suggestionsBox.style.display = "none";
+        }
+      });
+
+    </script>
+
+
+</body>
+</html>
