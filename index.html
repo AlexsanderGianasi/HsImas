@@ -4,78 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imgs/HS melhorada 2.0.png" type="image/png">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
-    <title>Hs Imãs</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+    <title>HS Imãs</title>
+    <script src="mobile-navbar.js" defer></script>
 </head>
 <body>
-    
     <header>
-        <main>
-            <a href="index.html"><img src="imgs/HS melhorada 2.0.png" alt="Logo HS Imãs" class="logo"></a>
-
-            <span id="burger" class="fi fi-rr-menu-burger" onclick="clickMenu()"></span>
-
-            <a href="https://wa.me/5511971113003?text=Ol%C3%A1%20HS%20conheci%20o%20site%20de%20voc%C3%AAs%20e%20estou%20interessado%20em%20um%20produto!" target="_blank"><i class="fi fi-brands-whatsapp icon"></i></a>
-
-        </main>
-
-        <nav id="itens" style="display: none;">
-            <ul class="nav-links">
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="https://wa.me/5511971113003?text=Ol%C3%A1%20HS%20conheci%20o%20site%20de%20voc%C3%AAs%20e%20estou%20interessado%20em%20um%20produto!" target="_blank">Contato</a></li>
+        <nav>
+            <a href="/"><img class="logo" src="imgs/HS melhorada 2.0.png" alt=""></a>
+            <div class="menu-icon">
+                <a href="/"><i class="fi fi-brands-whatsapp"></i></a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/">Sobre Nós</a></li>
+                <li><a href="/">Produtos</a></li>
+                <li><a href="/">Contato</a></li>
             </ul>
         </nav>
     </header>
-
-    <section class="placaMag">
-      <h1><strong>Placa Magnética</strong></h1>
-      <p>Placa magnética industrial de alta qualidade, ideal para retíficas, fresadoras e processos de usinagem que exigem fixação firme e precisa. Projetada para oferecer máximo desempenho, segurança e estabilidade, mesmo em trabalhos contínuos e pesados. <br><br>
-
-      ✔️ Fixação magnética uniforme e potente, garantindo peças bem presas durante toda a operação <br>
-      ✔️ Construção robusta, com acabamento retificado para maior precisão <br>
-      ✔️ Sistema de acionamento manual ON/OFF, simples e confiável <br>
-      ✔️ Alta durabilidade, ideal para ambientes industriais e oficinas profissionais <br>
-      ✔️ Excelente custo-benefício para quem busca eficiência sem abrir mão da qualidade <br><br>
-
-      Essa placa magnética é a escolha certa para profissionais que precisam de precisão, produtividade e confiança no dia a dia da usinagem. Um equipamento essencial para elevar o nível do seu trabalho. <br><br>
-
-      📦 Produto em ótimo estado <br>
-      🚀 Pronto para uso imediato <br><br>
-
-      Entre em contato para mais informações e garanta um equipamento que realmente faz a diferença no seu processo produtivo!</p>
-
-      <div class="placas">
-        <img class="redonda" src="imgs/placa redonda.png" alt="">
-        <img class="retangular" src="imgs/Placa magnetica.png" alt="placa magnetica">
-      </div>
-    </section>
-
-
-
-
-    <script>
-
-        function mudouTamanho() {
-            if (window.innerWidth >= 768) {
-                itens.style.display = "block";
-            } else {
-              itens.style.display = "none";
-            }
-        }
-
-        function clickMenu() {
-            let itens = document.getElementById("itens");
-            if (itens.style.display == "block") {
-            itens.style.display = "none";
-            } else {
-            itens.style.display = "block";
-            }
-        }
-    </script>
-
-
+    <main>
+    </main>
 </body>
 </html>
