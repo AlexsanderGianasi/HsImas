@@ -3,12 +3,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background: url(https://i.pinimg.com/1200x/39/48/02/39480257aae68c49790d5e0c341f2817.jpg) no-repeat center center;
     background-size: cover;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -17,7 +19,7 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
+.logo:hover {
     box-sizing: border-box;
     margin-bottom: 4px;
     transition: 0.2s;
@@ -35,15 +37,6 @@ nav {
     height: 7vh;
     background-color: rgb(236, 236, 236);
     border-radius: 0 0 10px 10px;
-}
-
-.menu-icon {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-left: 77vw;
-    justify-content: space-evenly;
-    
 }
 
 .nav-list {
@@ -125,4 +118,97 @@ nav {
 
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.conteiner-search {
+    height: 100vh;
+    margin-inline: 1.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.search {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    background-color: #fff;
+    box-shadow: 0 4px 24px hsl(222, 68%, 12%, .1);
+    border-radius: 4rem;
+    padding: 10px;
+    overflow: hidden;
+    transition: width .5s cubic-bezier(.9, 0, .3, .9);
+}
+
+.search_input {
+    border: none;
+    outline: none;
+    width: calc(100% - 64px);
+    height: 100%;
+    border-radius: 4rem;
+    padding-left: 14px;
+    font-family: poppins, sans-serif;
+    font-size: small;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s;
+}
+
+.search_input:-webkit-autofill {
+    box-shadow: 0 0 0 100px #fff inset;
+}
+
+.search_button {
+    width: 56px;
+    height: 56px;
+    background-color: #0026ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.search_icon, 
+.search_close {
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    transition: opacity .5s cubic-bezier(.9, 0, .3, .9);
+}
+
+.search_close {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.show-search {
+    width: 100%;
+}
+
+.show-search .search_input {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.show-search .search_button {
+    transform: rotate(90deg);
+}
+
+.show-search .search_icon {
+    opacity: 0;
+}
+
+.show-search .search_close {
+    opacity: 1;
+}
+
+@media screen and (min-width: 576px){
+    .show-search{
+        width: 450px;
+    }
 }

@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <title>HS Imãs</title>
-    <script src="mobile-navbar.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="/"><img class="logo" src="imgs/HS melhorada 2.0.png" alt=""></a>
-            <div class="menu-icon">
+
+                <div class="conteiner-search">
+                    <form action="" class="search" id="search-bar">
+                        <input type="search" placeholder="Pesquisar..." class="search_input">
+
+                        <div class="search_button" id="search-button">
+                            <i class="fi fi-br-search search_icon"></i>
+                            <i class="fi fi-br-cross search_close"></i>
+                        </div>
+
+                    </form>
+                </div>
+
                 <a href="/"><i class="fi fi-brands-whatsapp"></i></a>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-            </div>
             <ul class="nav-list">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/">Sobre Nós</a></li>
