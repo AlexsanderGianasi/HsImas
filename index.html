@@ -3,44 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <title>HS Imãs</title>
-    <script src="main.js" defer></script>
+    <link rel="shortcut icon" href="imgs/hs-logo.png" type="image/png">
+    <!-- Links Icons -->
+
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+
+    <!-- Links Icons -->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripts/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/"><img class="logo" src="imgs/HS melhorada 2.0.png" alt=""></a>
-
-                <div class="conteiner-search">
-                    <form action="" class="search" id="search-bar">
-                        <input type="search" placeholder="Pesquisar..." class="search_input">
-
-                        <div class="search_button" id="search-button">
-                            <i class="fi fi-br-search search_icon"></i>
-                            <i class="fi fi-br-cross search_close"></i>
-                        </div>
-
-                    </form>
-                </div>
-
-                <a href="/"><i class="fi fi-brands-whatsapp"></i></a>
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            <ul class="nav-list">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/">Sobre Nós</a></li>
-                <li><a href="/">Produtos</a></li>
-                <li><a href="/">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span><img class="logo" src="imgs/hs-logo.png" alt="HS"></span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <i class="fi fi-rr-angle-double-small-left seta"></i>
+                </button>
+            </li>
+            <li class="active">
+                <a href="index.html">
+                    <i class="fi fi-rr-house-chimney"></i>
+                    <span>Menu</span>
+                </a>
+            </li>
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <i class="fi fi-rr-shop"></i>
+                    <span>Produtos</span>
+                    <i class="fi fi-rr-angle-small-down"></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="#">Placa Magnética</a></li>
+                        <li><a href="#">Grade Magnética</a></li>
+                        <li><a href="#">Placa de Separação</a></li>
+                        <li><a href="#">Pinça Magnética</a></li>
+                        <li><a href="#">Embuchados Magneticos</a></li>
+                        <li><a href="#">Desmagnetizador</a></li>
+                        <li><a href="#">Transpassador</a></li>
+                        <li><a href="#">Levantadores</a></li>
+                        <li><a href="#">Pulseiras Magnéticas</a></li>
+                        <li><a href="#">Imãs</a></li>
+                    </div>
+                </ul>
+            </li>
+            
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <i class="fi fi-rr-circle-phone"></i>
+                    <span>Contatos</span>
+                    <i class="fi fi-rr-angle-small-down"></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="#">Whatsapp</a></li>
+                        <li><a href="#">Email:</a></li>
+                        <li><a href="#">Tell:</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="sobre.html">
+                    <i class="fi fi-rr-info"></i>
+                    <span>Sobre Nós</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <main>
+        <div class="container">
+            <h2 >hello World</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum qui consequatur ut enim aspernatur iure, numquam inventore fugit libero reiciendis! Accusantium iusto alias aspernatur consequatur sint? Itaque dignissimos laudantium quod!</p>
+        </div>
+        <div class="container">
+            <h2 >hello World</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum qui consequatur ut enim aspernatur iure, numquam inventore fugit libero reiciendis! Accusantium iusto alias aspernatur consequatur sint? Itaque dignissimos laudantium quod!</p>
+        </div>
+        <div class="container">
+            <h2 >hello World</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum qui consequatur ut enim aspernatur iure, numquam inventore fugit libero reiciendis! Accusantium iusto alias aspernatur consequatur sint? Itaque dignissimos laudantium quod!</p>
+        </div>
     </main>
 </body>
 </html>
