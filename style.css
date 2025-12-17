@@ -6,11 +6,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background: url(https://i.pinimg.com/1200x/39/48/02/39480257aae68c49790d5e0c341f2817.jpg) no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    overflow-x: hidden;
+header {
+    overflow: hidden;
 }
 
 a {
@@ -77,6 +74,7 @@ nav {
         align-items: center;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
+        display: none;
     }
 
     .nav-list li {
@@ -90,6 +88,7 @@ nav {
 
     .nav-list.active {
         transform: translateX(0);
+        display: flex;
     }
 }
 
