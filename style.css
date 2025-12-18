@@ -25,9 +25,6 @@ html {
   line-height: 1.5rem;
 }
 body {
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--base);
   color: var(--black);
   display: grid;
   grid-template-columns: auto 1fr;
@@ -36,6 +33,7 @@ body {
   display: none; /* Chrome, Safari, Edge */
 }
 nav {
+  z-index: 10;
   box-shadow: -5px -1px 13px 0px;
 }
 i {
@@ -56,7 +54,6 @@ i {
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
-  border-radius: 0px 30px 30px 0px;
 }
 #sidebar.close {
   padding: 5px;
@@ -73,6 +70,7 @@ i {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
+
   .logo {
     width: 55px;
     box-sizing: content-box;
@@ -170,26 +168,6 @@ i {
   color: var(--branco);
 }
 
-main {
-  padding: min(30px, 7%);
-}
-main p {
-  color: var(--black);
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-.container {
-  border: 1px solid var(--agua);
-  border-radius: 1em;
-  margin-bottom: 20px;
-  padding: min(3em, 15%);
-
-  h2,
-  p {
-    margin-top: 1em;
-  }
-}
-
 @media (max-width: 800px) {
   body {
     grid-template-columns: 1fr;
@@ -202,14 +180,6 @@ main p {
   }
   nav{
     box-shadow: 0px -9px 40px 0px;
-  }
-  main {
-    padding: 2em 1em 60px 1em;
-    margin-top: 50px;
-  }
-  .container {
-    border: none;
-    padding: 0;
   }
   #sidebar {
     height: 60px;
@@ -295,6 +265,46 @@ main p {
 
 /* section 1 */
 
+section{
+  padding: 0 14%;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(imgs/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+.hero-img img{
+  width: 100%;
+  height: auto;
+}
+.hero-text h1 {
+  line-height: 40px;
+  font-size: 48px;
+  font-weight: 900;
+  margin: 15px 0;
+  color: var(--base);
+}
+.hero-text h5{
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--base);
+}
+.hero-text p {
+  width: 100%;
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--base);
+  margin-bottom: 15px;
+}
 
 
 
