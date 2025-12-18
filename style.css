@@ -76,6 +76,7 @@ i {
   .seta {
     font-size: 20px;
     margin-left: -1px;
+    rotate: 180deg;
   }
 }
 
@@ -251,7 +252,7 @@ main p {
       display: none;
     }
     .sub-menu div li a:hover {
-      background-color: var(--roial);
+      background-color: var(--azul);
       font-weight: 600;
       text-underline-offset: var(--branco);
       box-sizing: border-box;
@@ -264,8 +265,9 @@ main p {
       box-sizing: border-box;
       height: 60px;
       width: 100%;
-      background-color: var(--roial);
-      border-top: 1px solid var(--agua);
+      background-color: var(--azul);
+      border-bottom: 1px solid var(--base);
+      border-radius: 0 0 20px 20px;
       display: flex;
       justify-content: center;
 
