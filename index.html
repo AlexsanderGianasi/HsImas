@@ -3,100 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="shortcut icon" href="imgs/hs-logo.png" type="image/png">
-    <!-- Links Icons -->
-
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
-
-    <!-- Links Icons -->
+    <link rel="shortcut icon" href="img/hs-logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="scripts/main.js" defer></script>
+    <!-- links flatcon -->
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+
+    <script src="main.js" defer></script>
+    <title>Home</title>
 </head>
 <body>
-    <!-- --------------------- Header -------------------------- -->
-    <nav id="sidebar">
-        <ul>
-            <li>
-                <span><img class="logo" src="imgs/hs-logo.png" alt="HS"></span>
-                <button onclick=toggleSidebar() id="toggle-btn">
-                    <i class="fi fi-rr-angle-double-small-left seta"></i>
-                </button>
-            </li>
-            <li class="active">
-                <a href="index.html">
-                    <i class="fi fi-rr-house-chimney"></i>
-                    <span>Menu</span>
-                </a>
-            </li>
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <i class="fi fi-rr-shop"></i>
-                    <span>Produtos</span>
-                    <i class="fi fi-rr-angle-small-down"></i>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li><a href="#">Placa Magnética</a></li>
-                        <li><a href="#">Grade Magnética</a></li>
-                        <li><a href="#">Placa de Separação</a></li>
-                        <li><a href="#">Pinça Magnética</a></li>
-                        <li><a href="#">Embuchados Magneticos</a></li>
-                        <li><a href="#">Desmagnetizador</a></li>
-                        <li><a href="#">Transpassador</a></li>
-                        <li><a href="#">Levantadores</a></li>
-                        <li><a href="#">Pulseiras Magnéticas</a></li>
-                        <li><a href="#">Imãs</a></li>
-                    </div>
-                </ul>
-            </li>
-            
-            <li>
-                <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <i class="fi fi-rr-circle-phone"></i>
-                    <span>Contatos</span>
-                    <i class="fi fi-rr-angle-small-down"></i>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li><a href="#">Whatsapp</a></li>
-                        <li><a href="#">Email:</a></li>
-                        <li><a href="#">Tell:</a></li>
-                    </div>
-                </ul>
-            </li>
-            <li>
-                <a href="sobre.html">
-                    <i class="fi fi-rr-info"></i>
-                    <span>Sobre Nós</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!-- --------------------- /Header -------------------------- -->
-
-     <!-- --------------------- Conteudo 1 -------------------------- -->
-    <section class="hero">
-        <div class="hero-text">
-            <h5>#Placa Magnética de Alta Precisão – Robustez e Confiabilidade Profissional</h5>
-            <h1>Placa Magnética</h1>
-            <p>
-                    Essa placa magnética é a escolha certa para profissionais que precisam de precisão, produtividade e confiança no dia a dia da usinagem. Um equipamento essencial para elevar o nível do seu trabalho.
-            </p>
-
-        <div class="main-hero">
-            <a href="#" class="btn">Adquira já</a>
-            <a href="#" class="price"> 
-                R$ 2.200,00 | <span>Promoção</span>
+    <!-- ================= HEADER ================= -->
+     <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo">
+                <img src="img/hs-logo.png" alt="HS Imãs" width="48px">
             </a>
-        </div>
-        
-    </div>
-    <div class="hero-img">
-            <img src="imgs/placa.png" alt="Placa Magnetica">
-        </div>
-    </section>
-    <!-- --------------------- /Conteudo 1 -------------------------- -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">Produtos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/" class="nav__link">Contato</a>
+                    </li>
+                </ul>
+
+                <!-- ============ Close Button ============ -->
+                 <div class="nav__close" id="nav-close">
+                    <i class="fi fi-rr-cross-small"></i>
+                 </div>
+
+                 <img src="img/hs-logo.png" alt="nav image" class="nav__img">
+            </div>
+            <!-- ============ Toggle Button ============ -->
+             <div class="nav__toggle" id="nav-toggle">
+                <i class="fi fi-rr-bars-staggered"></i>
+             </div>
+        </nav>
+     </header>
+    <!-- ================ MAIN ================ -->
+     <main class="main">
+        <!-- ================ HOME ================ -->
+        <section class="home">
+            <div class="home__shape-small"></div>
+            <div class="home__shape-big-1"></div>
+            <div class="home__shape-big-2"></div>
+            <img src="img/shape-bg.png" alt="" class="home__shape-bg">
+
+            <div class="home__container container">
+                <div class="home__info">
+                    <h1 class="home__title">
+                        <span>Discover</span> <br>
+                        Collect, and <br>
+                        sell NFTs.
+                    </h1>
+                    <p class="home__description">
+                        The leading NFT marketplace on Ethereum. Buy, sell, and discover exclusive digital assets.
+                    </p>
+                    <a href="/" class="home__button">explore</a>
+                </div>
+
+                <div class="home__group">
+                    <div class="home__images">
+                        <div class="home__img-hs">
+                            <img src="img/hs-logo.png" width="400px" alt="Home Image">
+                        </div>
+                        <div class="home__img-orbe">
+                            <img src="img/placa redonda.png" alt="Home Image">
+                        </div>
+                    </div>
+
+                    <div class="home__data">
+                        <div>
+                            <h2 class="home__data-number">26K+</h2>
+                            <span class="home__data-subtitle">Artwork</span>
+                        </div>
+
+                        <div>
+                            <h2 class="home__data-number">18K</h2>
+                            <span class="home__data-subtitle">Auction</span>
+                        </div>
+
+                        <div>
+                            <h2 class="home__data-number">8K</h2>
+                            <span class="home__data-subtitle">Artist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home__footer">
+                    <div>
+                        <span class="home__footer-title">current bid</span>
+                        <h3 class="home__footer-number">2.00 ETH</h3>
+                        <span class="home__footer-subtitle">$8046.86</span>
+                    </div>
+
+                    <div>
+                        <span class="home__footer-title">Auction ending in</span>
+
+                        <div class="home__footer-time">
+                            <div class="home__footer-counter">
+                                <h3 class="home_footer-number">06</h3>
+                                <span class="home__footer-subtitle">hours</span>
+                            </div>
+                            <div class="home__footer-counter">
+                                <h3 class="home_footer-number">24</h3>
+                                <span class="home__footer-subtitle">minutes</span>
+                            </div>
+                            <div class="home__footer-counter">
+                                <h3 class="home_footer-number">50</h3>
+                                <span class="home__footer-subtitle">seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </main>
 </body>
 </html>
