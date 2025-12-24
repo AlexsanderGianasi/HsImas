@@ -11,7 +11,7 @@
     --second-color: #1B63F2;
     --text-color: #e4e4e4;
     --text-color-light: #ffffff;
-    --body-color: #090438f8;
+    --body-color: #090438;
 
     /* ============ Font and Typography ============== */
     /* .5rem = 8px | 1rem = 16px */
@@ -214,7 +214,7 @@ img{
 
 .home__description{
     color: var(--text-color-light);
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.7rem;
 }
 
 .home__button{
@@ -283,13 +283,14 @@ img{
 }
 
 .home__footer{
-    margin-top: 2.5rem;
+    margin-top: -4.8rem;
     column-gap: 3.5rem;
 }
 
 .home__footer-title,
 .home__footer-subtitle{
-    font-size: var(--smaller-font-size);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
     display: block;
 }
 
@@ -309,6 +310,10 @@ img{
 
 .home__footer-counter{
     text-align: center;
+}
+
+.home__footer-counter i{
+    font-size: var(--h2-font-size);
 }
 
 /* shapes */
@@ -397,6 +402,8 @@ img{
     .home__footer{
         flex-direction: column;
         row-gap: 2rem;
+        align-items: center;
+        margin-top: 1rem;
     }
 }
 
@@ -410,9 +417,15 @@ img{
     .home__data{
         right: 1.5rem;
     }
+
+    .home__footer{
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: center;
+        margin-top: 1rem;
+    }
 }
 
-/* for medium devices */
 @media screen and (min-width: 767px){
     .nav{
         height: calc(var(--header-height) + 1.5rem);
@@ -525,7 +538,7 @@ img{
 
     .home__footer{
         position: relative;
-        top: -2rem;
+        top: 1rem;
     }
 }
 
@@ -546,6 +559,7 @@ img{
 
     .home__footer{
         font-size: x-large;
+        margin-top: 1rem;
     }
 }
 
@@ -556,5 +570,8 @@ img{
     .home__description{
         max-width: 600px;
         text-align: justify;
+    }
+    .home__footer{
+        margin-top: -9rem;
     }
 }
