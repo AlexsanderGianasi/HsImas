@@ -13,7 +13,6 @@
     --text-color: #e4e4e4;
     --text-color-light: #ffffff;
     --body-color: #090438;
-    --dark-color: #ffffff;
 
     /* ============ Font and Typography ============== */
     /* .5rem = 8px | 1rem = 16px */
@@ -29,39 +28,38 @@
 
     /* =========== z index ============ */
     --z-fixed: 100;
-    
 }
 
 /* Responsive Typografy */
 
-@media screen and (min-width: 768px) {
-  :root {
-    --nav-name-font-size: 1rem;
-    --normal-font-size: 1rem;
-  }
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-/*===== BASE =====*/
-
-body {
-  margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: 600;
-  background-color: #7c7c7c;
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+ul{
+    list-style: none;
 }
 
-a {
-  text-decoration: none;
+a{
+    text-decoration: none;
 }
 
-.bd-grid {
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+ .bd-grid {
   max-width: 100vw;
   display: grid;
   grid-template-columns: 100%;
@@ -87,7 +85,7 @@ a {
 .header__logo img{
   width: 40px;
   height: 40px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .header__toggle {
@@ -101,7 +99,7 @@ a {
     position: fixed;
     top: 0;
     left: -100%;
-    background-color: var(--first-color);
+    background-color: var(--body-color);
     width: 50%;
     height: 100vh;
     padding: 2rem 0;
@@ -109,6 +107,7 @@ a {
     transition: .5s;
     overflow-y: auto;
   }
+
 }
 
 .nav__content {
@@ -151,8 +150,10 @@ a {
   color: var(--first-color-light);
 }
 
+.nav__link:hover{
+    color: var(--first-color);
 
-
+}
 /*Show menu*/
 .show {
   left: 0;
@@ -160,7 +161,7 @@ a {
 
 /*Active link*/
 .active {
-  color: var(--white-color);
+  color: var(--first-color);
 }
 
 /*=== Dropdown ===*/
@@ -178,13 +179,10 @@ a {
 .dropdown__menu {
   margin: 1rem 0 0 1rem;
   display: none;
-  background: #ffffff;
 }
 
 .dropdown__item {
   margin: 1rem 0;
-  color: #363636;
-
 }
 
 .dropdown:hover > .dropdown__menu {
@@ -262,94 +260,24 @@ a {
     padding: .5rem 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: .5rem;
+    background-color: #e4e4e4;
   }
   .dropdown__item {
     margin: .5rem 0;
-
+    color: #181818;
   }
-}
-
-
-
-
-:root{
-    --header-height: 3.5rem;
-
-    /* Colors */
-
-    --first-color: #0540F2;
-    --second-color: #1B63F2;
-    --text-color: #e4e4e4;
-    --text-color-light: #ffffff;
-    --body-color: #090438;
-
-    /* ============ Font and Typography ============== */
-    /* .5rem = 8px | 1rem = 16px */
-
-    --body-font: 'Poppins', sans-serif;
-    --biggest-font-size: 3rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
-    --smaller-font-size: 0.75rem;
-
-    /* ========== Font Weight ========== */
-    --font-semi-bold: 600;
-
-    /* =========== z index ============ */
-    --z-fixed: 100;
 }
 
 /* Responsive Typografy */
 
 /* ================ BASE ============== */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-color);
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-}
 
 .conteiner{
     max-width: 1024px;
     margin-inline: 1.5rem;
 }
 .main{
-    overflow: hidden; /* For animetions */
-}
-/* ================ HEADER ================ */
-
-
-@media screen and (max-width: 767px){
-    .nav__menu{
-        position: fixed;
-        background-color: var(--body-color);
-        width: 100%;
-        left: 0;
-        top: -100%;
-        box-shadow: 0 3px 8px #030c1133;
-        padding: 4rem 0 3.5rem;
-        transition: top 0.6s;
-        overflow: hidden;
-    }
+    overflow: hidden;
 }
 
 .nav__link{
@@ -606,10 +534,6 @@ img{
 }
 
 @media screen and (min-width: 767px){
-    .nav__list{
-        flex-direction: row;
-        column-gap: 3rem;
-    }
 
     .home__container{
         height: 100vh;
@@ -642,7 +566,7 @@ img{
 
 
 @media screen and (min-width: 1024px){
-    
+
     .home__title{
         margin-bottom: 1rem;
     }
