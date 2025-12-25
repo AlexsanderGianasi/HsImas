@@ -1,64 +1,184 @@
 <!DOCTYPE html>
 <html lang="Pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
 
-        <title>Responsive menu dropdown</title>
-    </head>
-    <body>
-        <header class="header">
-            <a href="#" class="header__logo">Clay</a>
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-            <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+    <title>Responsive menu dropdown</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header__logo">Clay</a>
 
-            <nav class="nav" id="nav-menu">
-                <div class="nav__content bd-grid">
-                    <a href="" class="nav__perfil">
-                        <div class="nav__img">
-                            <img src="assets/img/hs-logo.png" alt="">
-                        </div>
-                    </a>
-    
-                    <div class="nav__menu">
-                        <ul class="nav__list">
-                            <li class="nav__item"><a href="#" class="nav__link active">Menu</a></li>
-    
-                            <li class="nav__item dropdown">
-                                <a href="#" class="nav__link dropdown__link">Sobre <i class='bx bx-chevron-down dropdown__icon'></i></a>
-                                    
-    
-                                <ul class="dropdown__menu">
-                                    <li class="dropdown__item"><a href="#" class="nav__link">Sobre nós</a></li>
-                                    <li class="dropdown__item"><a href="#" class="nav__link">Localização</a></li>
-                                    <li class="dropdown__item"><a href="#" class="nav__link">Oque fazemos</a></li>
-                                </ul>
-                            </li>
+      <i class="bx bx-menu header__toggle" id="header-toggle"></i>
 
-                            <li class="nav__item dropdown">
-                                <a href="#" class="nav__link dropdown__link">Produtos <i class='bx bx-chevron-down dropdown__icon'></i></a>
-                                    
-    
-                                <ul class="dropdown__menu">
-                                    <li class="dropdown__item"><a href="#" class="nav__link">Placa Magnética</a></li>
-                                    <li class="dropdown__item"><a href="#" class="nav__link">Better jobs</a></li>
-                                    <li class="dropdown__item"><a href="#" class="nav__link">Work Awards</a></li>
-                                </ul>
-                            </li>
+      <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+          <a href="" class="nav__perfil">
+            <div class="nav__img">
+              <img src="assets/img/hs-logo.png" alt="" />
+            </div>
+          </a>
 
-                            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                        </ul>
-                    </div>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link active">Menu</a>
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >Sobre <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">Sobre nós</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">Localização</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link">Oque fazemos</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item dropdown">
+                <a href="#" class="nav__link dropdown__link"
+                  >Produtos <i class="bx bx-chevron-down dropdown__icon"></i
+                ></a>
+
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Placa Magnética </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Placa de Separação </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Grades Magnéticas </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Embuchado Magnético </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Pinça Magnetica </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Transpassadores </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Desmagnetizador </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="nav__link"> Concertos </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- ================ HOME ================ -->
+      <section class="home">
+        <div class="home__shape-small"></div>
+        <div class="home__shape-big-1"></div>
+        <div class="home__shape-big-2"></div>
+        <img src="assets/img/shape-bg.png" alt="bg" class="home__shape-bg" />
+
+        <div class="home__container container">
+          <div class="home__info">
+            <h1 class="home__title">
+              <span>HS Imãs</span> <br />
+              Placa Magnética <br />
+              Precisão e Performance
+            </h1>
+            <p class="home__description">
+              Placa magnética industrial de alta qualidade, ideal para
+              retíficas, fresadoras e processos de usinagem que exigem fixação
+              firme e precisa. Projetada para oferecer máximo desempenho,
+              segurança e estabilidade, mesmo em trabalhos contínuos e pesados.
+            </p>
+            <a href="/" class="home__button">Saiba mais</a>
+          </div>
+
+          <div class="home__group">
+            <div class="home__images">
+              <div class="home__img-hs">
+                <img
+                  src="assets/img/hs-logo.png"
+                  width="400px"
+                  alt="Home Image"
+                />
+              </div>
+              <div class="home__img-orbe">
+                <img src="assets/img/placa redonda.png" alt="Home Image" />
+              </div>
+            </div>
+
+            <div class="home__data">
+              <div>
+                <h2 class="home__data-number">+2K</h2>
+                <span class="home__data-subtitle">Vendidos</span>
+              </div>
+
+              <div>
+                <h2 class="home__data-number">98%</h2>
+                <span class="home__data-subtitle">Aprovação</span>
+              </div>
+
+              <div>
+                <h2 class="home__data-number">100%</h2>
+                <span class="home__data-subtitle">Qualidade</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home__footer">
+            <div>
+              <span class="home__footer-title">Redes sociais</span>
+              <div class="home__footer-time">
+                <div class="home__footer-counter">
+                  <span class="home__footer-subtitle"
+                    ><i class="fi fi-brands-whatsapp"></i
+                  ></span>
                 </div>
-            </nav>
-        </header>
+                <div class="home__footer-counter">
+                  <span class="home__footer-subtitle"
+                    ><i class="fi fi-brands-instagram"></i
+                  ></span>
+                </div>
+                <div class="home__footer-counter">
+                  <span class="home__footer-subtitle"
+                    ><i class="fi fi-brands-tik-tok"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
