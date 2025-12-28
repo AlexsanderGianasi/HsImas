@@ -255,7 +255,7 @@ img{
   }
   .dropdown__menu {
     position: fixed;
-    margin: -10px -23px;
+    margin: 0px -23px;
     top: calc(var(--header-height) + 1rem);
     padding: .5rem 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -284,14 +284,13 @@ img{
     font-weight: var(--font-semi-bold);
     transition: color .4s;
 }
-
-
-/* ================ change background ================ */
-.header-bg{
-    background-color: var(--body-color);
-    box-shadow: 0 2px 4px hsla(203. 71%, 15%, .5);
+header{
+    transition: 0.3s ease-in-out;
 }
 
+header.roll{
+    background: var(--body-color);
+}
 /* ================ HOME ================ */
 
 .home{
@@ -663,4 +662,41 @@ img{
     .home__footer{
         margin-top: -9rem;
     }
+}
+
+.carousel{
+    margin: 100px auto;
+    width: 90%;
+    border: 5px solid red;
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation: spin 20s infinite linear;
+    padding-right: 1em;
+}
+
+.card{
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background: var(--second-color);
+    font-size: 3rem;
+    border-radius: .2rem;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
 }

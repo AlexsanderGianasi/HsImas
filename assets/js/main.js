@@ -21,3 +21,8 @@ function linkAction(){
   this.classList.add('active');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
+
+window.addEventListener("scroll", function(){
+  let header = document.querySelector('#header')
+  header.classList.toggle('roll', window.scrollY > 0)
+})
