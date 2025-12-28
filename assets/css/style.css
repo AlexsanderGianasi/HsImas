@@ -700,3 +700,7 @@ header.roll{
     from {translate: 0;}
     to {translate: -100%;}
 }
+
+.hero{
+    height: 82.9vh;
+}
