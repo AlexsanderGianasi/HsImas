@@ -41,8 +41,8 @@
 body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--body-color);
     color: var(--text-color);
+    background-color: var(--body-color);
 }
 
 ul{
@@ -224,13 +224,12 @@ img{
     margin-bottom: 0;
   }
   .nav__img {
-    width: 40px;
-    height: 40px;
+    height: auto;
     margin-right: .5rem;
     margin-bottom: 0;
   }
   .nav__img img {
-    width: 46px;
+    width: 55px;
   }
   .nav__name {
     color: var(--dark-color);
@@ -290,6 +289,7 @@ header{
 
 header.roll{
     background: var(--body-color);
+    border-radius: 0 0 20px 20px;
 }
 /* ================ HOME ================ */
 
@@ -398,10 +398,20 @@ header.roll{
     font-size: var(--normal-font-size);
     font-weight: var(--font-semi-bold);
     display: block;
+    color: var(--text-color);
 }
 
 .home__footer-title{
     margin-bottom: .75rem;
+}
+
+.home__footer-subtitle a{
+    color: #fff;
+    opacity: .7;
+}
+
+.home__footer-subtitle a:hover{
+    opacity: 1;
 }
 
 .home__footer-number{
@@ -429,6 +439,7 @@ header.roll{
     position: absolute;
     border-radius: 50%;
     filter: blur(100px);
+    z-index: -1;
 }
 
 .home__shape-small{
@@ -458,7 +469,7 @@ header.roll{
 }
 
 .home__shape-bg{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -466,6 +477,7 @@ header.roll{
     object-fit: cover;
     mix-blend-mode: soft-light;
     opacity: .4;
+    z-index: -1;
 }
 
 /* Animation Logo HS */
@@ -684,17 +696,6 @@ header.roll{
     display: flex;
 }
 
-.hero__shape-bg{
-    position: absolute;
-    bottom: 100;
-    left: 0;
-    width: 100vw;
-    height: 99vh;
-    object-fit: cover;
-    mix-blend-mode: soft-light;
-    opacity: .4;
-}
-
 .carousel{
     margin: 200px auto;
     width: 90%;
@@ -740,6 +741,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 3rem 3.5rem;
+    gap: 2rem;
 }
 
 .footer_contacts span{
@@ -793,7 +795,7 @@ footer{
 }
 
 .footer_contacts p{
-    max-width: 320px;
+    max-width: 250px;
 }
 
 @media screen and (max-width: 768px) {
@@ -802,6 +804,7 @@ footer{
         gap: 2rem;
     }
 }
+
 @media screen and (max-width: 426px) {
     .footer_content{
         grid-template-columns: repeat(1, 1fr);
