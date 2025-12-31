@@ -714,13 +714,14 @@ header.roll{
     align-items: center;
     justify-content: center;
     animation: spin 90s infinite linear;
+    gap: 0.3rem;
 }
 
 .card{
     flex: 0 0 5em;
-    height: 500px;
+    height: 360px;
     overflow-y: hidden;
-    font-size: 80px;
+    font-size: 60px;
     border-radius: .2rem;
     text-align: center;
     align-content: center;
