@@ -98,8 +98,10 @@ img{
     position: fixed;
     top: 0;
     left: -100%;
-    background-color: var(--body-color);
-    width: 65%;
+    background-color: white;
+    width: 60%;
+    box-shadow: 0px 0px 20px -4px;
+    border-radius: 0 30px 30px 0;
     height: 100vh;
     padding: 2rem 0;
     z-index: var(--z-fixed);
@@ -292,3 +294,24 @@ header.roll{
     box-shadow: 0px 0px 25px -4px;
 }
 
+.home-container{
+  background-color: #0540F2;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 65px 10px 0px 10px;
+  height: 90vh;
+}
+
+.home-content{
+  display: flex;
+  align-content: center;
+  flex-flow: wrap row;
+  justify-content: flex-start;
+}
+
+.home-content h1{
+  font-size: 48px;
+  line-height: 3rem;
+  margin: 30px 0 20px 0;
+
+}
