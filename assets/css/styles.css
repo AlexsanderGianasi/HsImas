@@ -323,19 +323,7 @@ header.roll{
   justify-content: center;
   bottom: 30px;
 }
-.home-button button{
-  width: 110px;
-  border-radius: 40px;
-  border: none;
-  padding: 10px 15px;
-  font-weight: 700;
-  background-color: #fff;
-  box-shadow: 0 0 20px -4px black;
-}
 
-.home-button button:hover{
-  
-}
 
 .home-content h1{
   font-size: 48px;
@@ -357,4 +345,21 @@ header.roll{
 
 .img{
   width: 240px;
+}
+
+.home-button button{
+  width: 110px;
+  border-radius: 40px;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 700;
+  background-color: #0540F2;
+  box-shadow: 0 0 10px -1px black;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.home-button button:hover{
+  box-shadow: 0 0 20px 1px #1e3ffd;
+  transform: scale(1.07);
 }
