@@ -357,9 +357,152 @@ header.roll{
   box-shadow: 0 0 10px -1px black;
   transition: all 0.3s ease;
   color: white;
+  cursor: pointer;
 }
 
 .home-button button:hover{
   box-shadow: 0 0 20px 1px #1e3ffd;
   transform: scale(1.07);
+}
+
+.card-content{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.title{
+  margin: 20px;
+}
+
+.card-list .card-item{
+  list-style: none;
+
+}
+
+.card-wrapper{
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.card-list .card-item .card-link{
+  user-select: none;
+  display: block;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 21px -12px black;
+  border: 2px solid transparent;
+  transition: 0.4s ease;
+}
+
+.card-list .card-item .card-link:active{
+  cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover{
+  border-color: #0540F2;
+}
+
+.bg-image{
+  height: 230px;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img{
+  border-radius: 10px;
+}
+
+.card-image{
+  height: 230px;
+}
+
+.card-list .card-link .card-image{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+  color: #1B63F2;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #dde4ff;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-list .card-link .badge.eletrica{
+ color: #ff7b00;
+ background: #f8e3cf;
+}
+
+.card-list .card-link .badge.magnetica{
+  color: #1B63F2;
+  background: #dde4ff;
+}
+
+.card-list .card-link .card-title{
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+  height: 35px;
+  width: 35px;
+  color: #1e3ffd;
+  border-radius: 50%;
+  margin: 30px 0 5px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid #1e3ffd;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+}
+
+.fi-rr-arrow-small-right{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.card-list .card-link:hover .card-button{
+  color: #fff;
+  background: #1e3ffd;
+}
+
+.card-wrapper .swiper-pagination-bullet{
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #0540F2;
+}
+
+.card-wrapper .swiper-pagination-bullet-active{
+  opacity: 1;
+}
+
+.card-wrapper .swiperslide{
+  color: #0540F2;
+  margin-top: -35px;
+}
+
+@media screen and (max-width: 768px){
+  .card-wrapper{
+    margin: 0 10px 25px;
+  }
+
+  .swiperslide{
+    display: none;
+  }
 }
