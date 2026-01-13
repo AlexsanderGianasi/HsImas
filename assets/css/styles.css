@@ -344,7 +344,7 @@ header.roll{
 }
 
 .img{
-  width: 240px;
+  width: 160px;
 }
 
 .home-button button{
@@ -586,4 +586,27 @@ footer{
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
     }
+}
+
+.description_section{
+  margin: 20px;
+  border-radius: 40px;
+  box-shadow: 0 0 21px -12px black;
+  padding: 15px;
+}
+
+.description_text-1 h2{
+  margin-top: 30px;
+  line-height: 2rem;
+  margin-bottom: 10px;
+}
+
+.description_text-2 h2{
+  margin-top: 30px;
+  line-height: 2rem;
+  margin-bottom: 10px;
+}
+
+.redonda{
+  rotate: 1deg;
 }
