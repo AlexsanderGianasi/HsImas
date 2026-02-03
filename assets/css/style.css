@@ -36,6 +36,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    scroll-margin-top: 140px;
 }
 
 body{
@@ -43,6 +45,7 @@ body{
     font-size: var(--normal-font-size);
     color: var(--text-color);
     background-color: var(--body-color);
+    
 }
 
 ul{
@@ -1034,7 +1037,7 @@ footer{
 
 .content_2{
     background-color: #fff;
-    margin: 20px;
+    margin: 90px 20px;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 21px -12px black;
@@ -1061,4 +1064,8 @@ footer{
     .content_2{
         margin: 50px 150px;
     }
+}
+
+a:hover{
+    cursor: pointer;
 }
