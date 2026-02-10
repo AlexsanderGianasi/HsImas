@@ -700,6 +700,7 @@ header.roll{
     overflow-y: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     height: 240px;
+    padding-top: 25px;
 }
 
 .carousel::-webkit-scrollbar{
