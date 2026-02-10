@@ -52,9 +52,6 @@ new Swiper('.card-wrapper', {
     1024: {
       slidesPerView: 3
     },
-    1340: {
-      slidesPerView: 4
-    },
   }
 
 });
