@@ -1070,3 +1070,8 @@ footer{
 a:hover{
     cursor: pointer;
 }
+
+.td{
+    text-decoration: none;
+    color: #000;
+}
